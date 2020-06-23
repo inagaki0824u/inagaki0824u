@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>がちゃシュミレーター</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/gatya.css">
+</head>
+<body>
+  <header>
+    <h1>inagakiの制作物と記録 がちゃシュミレーター</h1>
+  </header>
+  
+  <nav>
+    <ul>
+      <li><a href="index.html">home</a></li>
+      <li><a href="gatya.html">がちゃシュミレーター</a></li>
+      <li><a href="shogi.html">将棋</a></li>
+    </ul>
+  </nav>
+  
+  <main>
+    <div>
+      <div calss = "slots">
+        <div id ="obj0"></div>
+        <div id ="obj1"></div>
+        <div id ="obj2"></div>
+        <div id ="obj3"></div>
+      </div>
+      <div calss = "slots">
+        <div id ="obj4"></div>
+        <div id ="obj5"></div>
+        <div id ="obj6"></div>
+        <div id ="obj7"></div>
+      </div>
+      <div id="btn">購入</div>
+      <div class = "results">
+        <div>引いたパック数　</div><div id = "packs">0</div>
+        <div>引いたカード数　</div><div id = "cards">0</div>
+        <div>レジェンドの枚数</div><div id = "legends">0</div>
+        <div>ゴールドの枚数　</div><div id = "golds">0</div>
+        <div>シルバーの枚数　</div><div id = "silvers">0</div>
+        <div>ブロンズの枚数　</div><div id = "bronzese">0</div>
+      </div>
+      <div class="possession">
+        <div>所持金</div><div id="money">20000円</div>
+      </div>
+      <div class="config">
+        <div class = "config_form"><input id="config" type="submit" value="変更（リセット）"></div>
+        <div class = "config_form">　　　　　　　所持金：<input id="newmoney" type="text"size="12" maxlength="12" value="20000" pattern="(0|[1-9][0-9]*)"></div>
+        <div class = "config_form">　　　１パックの値段：<input id="price"    type="text"size="12" maxlength="12" value="200"   pattern="(0|[1-9][0-9]*)"></div>
+        <div class = "config_form">レジェンド封入率(%)：<input id="ran0"      type="text"size="12" maxlength="12" value="1.5"   pattern="([1-9][0-9]{0,2}|0)(\.[0-9]{1,2})"></div>
+        <div class = "config_form">　ゴールド封入率(%)：<input id="ran1"      type="text"size="12" maxlength="12" value="6"     pattern="([1-9][0-9]{0,2}|0)(\.[0-9]{1,2})"></div>
+        <div class = "config_form">　シルバー封入率(%)：<input id="ran2"      type="text"size="12" maxlength="12" value="25"    pattern="([1-9][0-9]{0,2}|0)(\.[0-9]{1,2})"></div>
+        <div class = "config_form">　　　　　１枚はシルバー以上確定：<input id="fixed" type="checkbox" checked="checked"></div>
+        <div class = "config_form">所持金が足りない場合購入できない：<input id="finit" type="checkbox"></div>
+        <div class = "config_form"><input id="reset" type="submit" value="初期化"></div>
+      </div>
+    </div>
+    <p>
+      説明：<br>
+      某スマホゲームのガチャを再現したシュミレーターです。<br>
+      購入ボタンを押すと8つの図形の中の色が更新されます。<br>
+      色はそれぞれ、虹が1.5％、金が6％、銀が25％、銅が67.50％の確率で表示されます。<br>
+      購入ボタン下の入力から、各設定を変更することができます。
+    </p>
+    <p>
+      コメント：<br>
+      javascriptのチュートリアルで基礎を学んだ後、ドットインストール様のおみくじを作る講座をまねしていたところ、<br> ガチャみたいなものが作れそうと思いつき作成。制作期間は5月1日から3日間程。<br> これがスクリプト言語における初のオリジナル作品になります。<br>
+      　<br>
+      改善したほうがいい挙動として、入力欄への入力が正しくない表現であってもそのままプログラムが実行される点。<br> 直すためには、javascriptの側で正規表現を使って入力が適正かチェックして、正しくない場合、<br> 警告をだしてメインが実行されないようにするとうまくいくんじゃないかなと思っています。<br>
+      　<br>
+      現状、スロットが8枠、色が4種類で固定されているけど、それらの数を可変にして、<br> 色や内容も変更できるようにすると、1台で他のシュミレートに対応できて面白そう。
+    </p>
+    <script src="js/gatya.js"></script>
+  </main>
+  <footer><small>&copy 2020 inagaki</small></footer>
+</body>
+</html>

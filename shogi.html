@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>将棋</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/shogi.css">
+</head>
+<body>
+  <header>
+    <h1>inagakiの制作物と記録 将棋</h1>
+  </header>
+  
+  <nav>
+    <ul>
+      <li><a href="index.html">home</a></li>
+      <li><a href="gatya.html">がちゃシュミレーター</a></li>
+      <li><a href="shogi.html">将棋</a></li>
+    </ul>
+  </nav>
+  
+  <main>
+    <div style = "display:none;">
+      <div id="cell" class="cell"></div>
+      <div id="___"></div>
+      <img id="fu" src="img/koma/fu.png">
+      <img id="ky" src="img/koma/ky.png">
+      <img id="ke" src="img/koma/ke.png">
+      <img id="gi" src="img/koma/gi.png">
+      <img id="ki" src="img/koma/ki.png">
+      <img id="ka" src="img/koma/ka.png">
+      <img id="hi" src="img/koma/hi.png">
+      <img id="ou" src="img/koma/ou.png">
+      <img id="to" src="img/koma/to.png">
+      <img id="ny" src="img/koma/ny.png">
+      <img id="nk" src="img/koma/nk.png">
+      <img id="ng" src="img/koma/ng.png">
+      <img id="um" src="img/koma/um.png">
+      <img id="ry" src="img/koma/ry.png">
+      <img id="efu" src="img/koma/efu.png">
+      <img id="eky" src="img/koma/eky.png">
+      <img id="eke" src="img/koma/eke.png">
+      <img id="egi" src="img/koma/egi.png">
+      <img id="eki" src="img/koma/eki.png">
+      <img id="eka" src="img/koma/eka.png">
+      <img id="ehi" src="img/koma/ehi.png">
+      <img id="eou" src="img/koma/eou.png">
+      <img id="eto" src="img/koma/eto.png">
+      <img id="eny" src="img/koma/eny.png">
+      <img id="enk" src="img/koma/enk.png">
+      <img id="eng" src="img/koma/eng.png">
+      <img id="eum" src="img/koma/eum.png">
+      <img id="ery" src="img/koma/ery.png">
+      <div id="sidepiece" class="sidepiece"></div>
+      <div id="sidenum" class="sidenum"></div>
+    </div>
+    <div id="borad">
+    </div>
+    <div id="sidepieceholder">
+    </div>
+    <div>
+      <div id="wteban">手番</div>
+      <div id="bteban" style="display:none">手番</div>
+    </div>
+    <p class="text">
+      遊び方：駒をクリックすると選択状態になります。その状態で移動可能なマスをクリックすると駒がそこへ移動します。<br>
+      　　　　選択状態の駒のマスを再びクリックすると選択状態が解除されます。駒の動きは一般的な将棋と同じです。<br>
+      <br>
+      注意点：2歩、王手放置、打ち歩詰めの反則に対応してません。行き場のない駒を作る反則に対応してません。<br>
+      　　　　お互いの敵陣一番奥の段に駒を進めると成れる駒は強制的に成り駒になります。<br>
+      <br>
+      <br>
+      コメント：javascriptによる2作目です。前作のガチャシュミレーターを経て、将棋を再現できそうと感じ作成。<br> 
+      　　　　　制作期間は5月4日くらいから、約2週間程。わからないことばかりで、とにかく進むという体当たりな<br> 
+      　　　　　作成になりました。いつか2回目で今度はスマートな記述にしたい。<br> 
+      　　　　　実装手順は、9×9のマスの表示→マスの上に駒の表示→駒をクリック可能に→駒を他のマスに移動可能に<br>
+      　　　　　→駒の可動範囲を設定→手番が変わるように→成り駒の実装→駒台の表示→駒台から駒が打てるように<br>
+      　　　　　→駒台関連の機能実装<br>
+      　　　　　駒台の関連で前の記述とのすり合わせが難しく、結果としてコードは駒台関連が特にわかりずらくなった。<br>
+      　　　　　構想の段階で盤面と駒台を分けて考えた故まとまらなかったと振り返る。いづれまたパワーアップしたら<br>
+      　　　　　雪辱する予定。
+
+    </p>
+    <script src="js/shogi.js"></script>
+  </main>
+  <footer><small>&copy 2020 inagaki</small></footer>
+</body>
+</html>
