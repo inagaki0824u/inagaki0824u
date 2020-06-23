@@ -1,0 +1,53 @@
+body{
+  background:#efefef;
+}
+.cell{
+  position: absolute;
+  width : 51px;
+  height: 51px;
+  border: solid 1px #000;
+  background-color: #ffa500;
+}
+#borad{
+  position: relative;
+  top: 100px;
+  left: 210px;
+}
+#sidepieceholder{
+  position: relative;
+  top: 50px;
+  left: 20px;
+}
+.sidepiece{
+  position: absolute;
+  width : 56px;
+  height: 50px;
+  background:#A0522D;
+}
+.sidenum{
+  position: absolute;
+  top: 25px;
+  left: 44px;
+  color:white;
+}
+#wteban {
+  display: block;
+  width: 35px;
+  position: relative;
+  top: 310px;
+  left: 710px;
+}
+#bteban {
+  display: block;
+  width: 35px;
+  position :relative;
+  top: 310px;
+  left: 125px;
+  transform: rotate(180deg)
+}
+main {
+  height: 1100px;
+}
+.text{
+  margin-top: 600px;
+}

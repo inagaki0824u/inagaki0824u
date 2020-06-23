@@ -1,0 +1,53 @@
+@import url('https://fonts.googleapis.com/css?family=M+PLUS+1p');
+
+body {
+  width: 900px;
+  margin: 0 auto;
+  min-height: 100vh;
+}
+header {
+  border-bottom: lightslategray solid 1px;
+}
+
+header h1 {
+  font-family: 'M PLUS 1p', sans-serif; 
+}
+
+nav ul {
+  margin-top: 20px;
+  padding: 0px;
+  list-style: none;
+  letter-spacing: -0.4em;
+}
+
+nav li {
+  display: inline-block;
+  width: 175px;
+  height: 30px;
+  text-align: center;
+  border: lightslategray solid 1px;
+  border-radius: 5px;
+  letter-spacing: normal;
+}
+
+nav li a {
+  display: block;
+  line-height: 2.0;
+  text-decoration: none;
+  color: #333;
+}
+
+main {
+  height: 600px;
+  margin-top: 30px;
+  padding: 10px;
+  border: gray solid 1px;
+}
+
+
+
+footer {
+  margin: 30px 0px;
+  text-align: right;
+  color: gray;
+}

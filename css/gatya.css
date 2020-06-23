@@ -1,0 +1,64 @@
+/* body {
+  background:#CCFFFF;
+} */
+
+#obj0,#obj1,#obj2,#obj3,#obj4,#obj5,#obj6,#obj7
+{
+  display: inline-block;
+
+  width: 100px;
+  height: 130px;
+  background: #424242;
+  border: medium solid #808080;
+  border-radius: 5%;
+  margin: 10px 15px;
+
+  user-select: none;
+}
+
+#btn{
+  width: 200px;
+  height: 50px;
+  background: #efefef;
+  border: 2px solid #808080;
+  border-radius: 8%;
+  margin:30px 320px 100px;
+
+  text-align: center;
+  line-height: 50px;
+  color:#808080;
+  font-weight: 1px;
+  font-size: 27px;
+  user-select: none;
+
+  cursor: pointer;
+}
+
+#btn:hover {
+  opacity: 0.8;
+}
+
+.results {
+  position: absolute;
+  top: 20px;
+  left: 570px;
+}
+.possession{
+  display: inline-block;
+  position: absolute;
+  top: 340px;
+  left: 35px;
+
+  line-height: 40px;
+  color:#000;
+  font-weight: solid;
+  font-size: 25px;
+}
+
+.config_form{
+  margin:5px 5px 5px;
+}
+main {
+  height: 1300px;
+  position: relative;
+}
