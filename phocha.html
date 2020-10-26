@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>photo seacher</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/phocha.css">
+</head>
+<body>
+  <header>
+    <h1>inagakiの制作物と記録 photo seacher</h1>
+  </header>
+  
+  <nav>
+    <ul>
+      <li><a href="index.html">home</a></li>
+      <li><a href="gatya.html">がちゃシュミレーター</a></li>
+      <li><a href="shogi.html">将棋</a></li>
+      <li><a href="phocha.html">photo seacher</a></li>
+    </ul>
+  </nav>
+  
+  <main>
+    <div id="app">
+      <input name="key" type="text" placeholder="文字を入力してください" v-model="input">  
+      <input name="btn" type="submit" value="ボタン" v-on:click="seach">
+      <div class="photos">
+        <div class="items" v-for="item of hits">
+          <a v-bind:href ="item.pageURL" target = "_blank" rel = "noopener noreferrer">
+            <img v-bind:src="item.previewURL">
+         </a>
+        </div>
+      </div>
+    </div>
+    <p>
+      検索ボタンを押すと入力されたワードに関連するイラスト、写真を表示します。</br>
+      npm、webpack、babel、vueについてのアウトプット、非同期通信によるapiの呼び出しとデータの表示が目標の作成。</br>
+      コードはwebpackでES5形式に変換してbundleしたものです。元々の作業環境とコードは<a href="https://github.com/inagaki0824u/inagaki0824u2.github.io/tree/master/main
+      " target=”_blank” rel=”noopener”>こちら</a>になります。</br>
+    </p>
+    
+    <script src="./js/phocha.js"></script>
+  </main>
+  <footer><small>&copy 2020 inagaki</small></footer>
+</body>
+</html>
